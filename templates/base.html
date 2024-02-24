@@ -16,6 +16,19 @@
 
    <!-- CSS Links  -->
    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/main-page-style.css') }}">
+   <link rel="stylesheet" href="{{ url_for('static', filename = 'css/main-page-style.css.map') }}">
+   <link rel="stylesheet" href="{{ url_for('static', filename = 'css/navbar.css') }}">
+   <link rel="stylesheet" href="{{ url_for('static', filename = 'css/main-page-components-style/about.css') }}">
+   <link rel="stylesheet" href="{{ url_for('static', filename = 'css/main-page-components-style/blogs.css') }}">
+   <link rel="stylesheet" href="{{ url_for('static', filename = 'css/main-page-components-style/contact.css') }}">
+   <link rel="stylesheet" href="{{ url_for('static', filename = 'css/main-page-components-style/home.css') }}">
+   <link rel="stylesheet" href="{{ url_for('static', filename = 'css/main-page-components-style/projects.css') }}">
+   <link rel="stylesheet" href="{{ url_for('static', filename = 'css/main-page-components-style/reviews.css') }}">
+   <link rel="stylesheet" href="{{ url_for('static', filename = 'css/main-page-components-style/services.css') }}">
+   <link rel="stylesheet" href="{{ url_for('static', filename = 'css/footer.css') }}">
+
+
+
 </head>
 
 <body>
@@ -26,8 +39,6 @@
     {% block content%}
     {% endblock %}
 </div>
-
-{% include 'footer.html' %}
 
    <!-- JavaScript Scripts  -->
    <script src="{{ url_for('static', filename='js/main-page-script.js') }}"></script>

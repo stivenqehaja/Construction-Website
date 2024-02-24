@@ -1,0 +1,16 @@
+.footer {
+    text-align: center;
+  }
+  .footer .links .btn {
+    margin: 0.5rem;
+  }
+  .footer .credit {
+    font-size: 2rem;
+    color: var(--black);
+    text-transform: capitalize;
+    margin-top: 2rem;
+    padding-top: 1rem;
+  }
+  .footer .credit span {
+    color: var(--green);
+  }

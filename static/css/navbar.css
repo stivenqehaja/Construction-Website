@@ -1,0 +1,233 @@
+/*________________NAVBAR________________*/
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: var(--box-shadow);
+    padding: 1.5rem 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+    z-index: 1000;
+    background: var(--white);
+    
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+  }
+  .header .logo .ukaIcon {
+    color: var(--black);
+    max-width: 20rem;
+  }
+  .header .logo span {
+    color: var(--green);
+  }
+  .header .navbar a {
+    font-size: 2rem;
+    color: var(--black);
+    text-transform: capitalize;
+    margin: 0 1rem;
+  }
+  .header .navbar a:hover {
+    color: var(--green);
+  }
+  .header .icons div {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    background: var(--light-bg);
+    color: var(--green);
+    cursor: pointer;
+    text-align: center;
+    margin-right: -10rem;
+    border-radius: 20%;
+  }
+  .header .icons div:hover {
+    background: var(--green);
+    color: var(--white);
+  }
+  .header #menu-btn {
+    display: none;
+  }  
+
+
+  /*________________CONTACT SLIDER________________*/
+
+  .contact-info {
+    position: fixed;
+    top: 0;
+    right: -35rem; /* Initially hidden to the right */
+    width: 35rem;
+    background: var(--white);
+    height: 100%;   
+    text-align: center;
+    z-index: 1100;
+    padding: 0 2rem;
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0; /* Initially hidden */
+    transition: right 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease; /* Transition added */
+}
+
+.contact-info.active {
+    right: 0; /* Displayed fully when active */
+    opacity: 1; /* Fully opaque when active */
+    box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.7); /* Updated box shadow when active */
+}
+  .contact-info #close-contact-info {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    cursor: pointer;
+    font-size: 4rem;
+    color: var(--black);
+  }
+  .contact-info #close-contact-info:hover {
+    transform: rotate(90deg);
+  }
+  .contact-info .info {
+    text-align: right;
+    min-width: 230px;
+    padding: 2rem 0;
+    margin-right: 5rem;
+  }
+  .contact-info .ukaIcon {
+    scale: 0.4;
+  }
+  .contact-info .info i {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    background: var(--light-bg);
+    color: var(--black);
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  .contact-info .info i:hover {
+    background: var(--black);
+    color: var(--white);
+  }
+  .contact-info .info h3 {
+    font-size: 2rem;
+    color: var(--black);
+    text-transform: capitalize;
+    padding: 1rem 0;
+    
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+  }
+  .contact-info .info p {
+    font-size: 1.5rem;
+    color: var(--light-color);
+    line-height: 2;
+  }
+  .info > p {
+       /* SET THE TEXT SELECTBLE */
+    user-select: auto;
+    -moz-user-select: auto;
+    -khtml-user-select: auto;
+    -webkit-user-select: auto;
+    -o-user-select: auto;
+  }
+  .contact-info .share {
+    padding-top: 2rem;
+    border-top: var(--border);
+    margin-top: 1rem;
+  }
+  .contact-info .share a {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    background: var(--light-bg);
+    color: var(--black);
+    cursor: pointer;
+    text-align: center;
+    margin: 0 0.3rem;
+  }
+  .contact-info .share a:hover {
+    background: var(--black);
+    color: var(--white);
+  }
+
+
+/*________________RESPONSIVITY________________*/
+
+@media (max-width: 1200px) {
+  /* .header {
+    padding: 1.0rem 1.5rem;
+   }  */
+  section {
+    padding: 3rem 5%;
+  }
+}
+@media (max-width: 1188px) {
+  html {
+    font-size: 55%;
+  }
+
+  section {
+    padding: 3rem 2rem;
+  }
+
+  .header #menu-btn {
+    display: inline-block;
+  }
+  .header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    border-top: var(--border);
+    border-bottom: var(--border);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: 0.2s linear;
+  }
+  .header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    text-align: right;
+    margin-right: 3rem;
+  }
+  .header .navbar a {
+    display: block;
+    margin: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .header .search-form {
+    width: 90%;
+  }
+  .header .login-form {
+    width: 90%;
+  }
+
+  .home .slide {
+    justify-content: center;
+  }
+  .home .slide .content {
+    text-align: center;
+  }
+  .home .slide .content h3 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
