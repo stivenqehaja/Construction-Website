@@ -6,6 +6,7 @@
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap: 2rem;
   }
+  
   .services .box-container .box {
     text-align: center;
     padding: 3rem;
@@ -31,4 +32,28 @@
     font-size: 1.4rem;
     color: var(--light-color);
     line-height: 2;
+  }
+
+/*________________RESPONSIVITY________________*/
+
+  @media (min-width: 1201px) {
+    .services .box-container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr); 
+      gap: 2rem;
+    }
+  }
+  
+  @media (max-width: 1200px) {
+
+  }
+
+  @media (max-width: 1262px) {
+  
+  }
+  @media (max-width: 768px) {
+  
+  }
+  @media (max-width: 450px) {
+  
   }

@@ -3,12 +3,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
 :root {
   --green: #17d271;
-  --black: #111;
-  --white: #fff;
+  --black: #0A0A0A;
+  --white: #ffffff;
   --light-color: #666;
   --light-bg: #eee;
   --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
   --border: .1rem solid rgba(0, 0, 0, .3);
+  --instagram: #E1306C;
+  --facebook: #43609C;
 }
 
 * {
@@ -87,68 +89,65 @@ section {
   -o-user-select: none;
 }
 
-/*________________RESPONSIVITY________________*/
+  /*________________RESPONSIVITY________________*/
 
-@media (max-width: 1200px) {
-  .header {
-    padding: 1.5rem 2rem;
+  @media (max-width: 1200px) {
+    .header {
+      padding: 1.5rem 2rem;
+    }
+    section {
+      padding: 3rem 5%;
+    }
   }
-
-  section {
-    padding: 3rem 5%;
+  @media (max-width: 1262px) {
+    html {
+      font-size: 55%;
+    }
+    section {
+      padding: 3rem 2rem;
+    }
+    .header #menu-btn {
+      display: inline-block;
+    }
+    .header .navbar {
+      position: absolute;
+      top: 99%;
+      left: 0;
+      right: 0;
+      background: var(--white);
+      border-top: var(--border);
+      border-bottom: var(--border);
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      transition: 0.2s linear;
+    }
+    .header .navbar.active {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .header .navbar a {
+      display: block;
+      margin: 2rem;
+    }
   }
-}
-@media (max-width: 1188px) {
-  html {
-    font-size: 55%;
+  @media (max-width: 768px) {
+    
+    .header .search-form {
+      width: 90%;
+    }
+    .header .login-form {
+      width: 90%;
+    }
+    .home .slide {
+      justify-content: center;
+    }
+    .home .slide .content {
+      text-align: center;
+    }
+    .home .slide .content h3 {
+      font-size: 3rem;
+    }
   }
-
-  section {
-    padding: 3rem 2rem;
+  @media (max-width: 450px) {
+    html {
+      font-size: 50%;
+    }
   }
-
-  .header #menu-btn {
-    display: inline-block;
-  }
-  .header .navbar {
-    position: absolute;
-    top: 99%;
-    left: 0;
-    right: 0;
-    background: var(--white);
-    border-top: var(--border);
-    border-bottom: var(--border);
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    transition: 0.2s linear;
-  }
-  .header .navbar.active {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-  .header .navbar a {
-    display: block;
-    margin: 2rem;
-  }
-}
-@media (max-width: 768px) {
-  .header .search-form {
-    width: 90%;
-  }
-  .header .login-form {
-    width: 90%;
-  }
-
-  .home .slide {
-    justify-content: center;
-  }
-  .home .slide .content {
-    text-align: center;
-  }
-  .home .slide .content h3 {
-    font-size: 3rem;
-  }
-}
-@media (max-width: 450px) {
-  html {
-    font-size: 50%;
-  }
-}

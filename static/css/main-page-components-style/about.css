@@ -4,10 +4,10 @@
     flex-wrap: wrap;
     gap: 3rem;
   }
-  .about .row .video {
+  .about .row .img {
     flex: 1 1 41rem;
   }
-  .about .row .video video {
+  .about .row .img img {
     width: 100%;
   }
   .about .row .content {
